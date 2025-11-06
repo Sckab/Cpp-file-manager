@@ -8,5 +8,12 @@ main: $(MAIN_FILE)
 
 	$(CXX) $(FLAGS) $(MAIN_FILE) -o $(OUTPUT)
 
+build-run: $(MAIN_FILE)
+	mkdir -p bin
+
+	$(CXX) $(FLAGS) $(MAIN_FILE) -o $(OUTPUT)
+
+	./$(OUTPUT)
+
 clean:
 	rm -f $(OUTPUT)
