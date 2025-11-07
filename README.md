@@ -4,7 +4,7 @@
 
 </div>
 
-This is a simple file manager made in C++, this is just for learning, i hope you like it!
+This is a simple (and blazingly fast) file manager made in C++, this is just for learning, i hope you like it!
 
 | Command          | Purpose                        |
 | ---------------- | ------------------------------ |
