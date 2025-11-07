@@ -15,7 +15,11 @@ int main(int argc, char *argv[]) {
 
     std::vector<std::string> listOfTheDirectory = listDirectories(path);
 
-    for (const auto &dir : listOfTheDirectory) {
+    for (std::string &dir : listOfTheDirectory) {
+        int lastSlash = dir.rfind('/');
+
+        dir = dir.erase(0, lastSlash + 1);
+
         std::cout << dir << std::endl;
     }
 
