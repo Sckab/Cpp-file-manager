@@ -3,7 +3,7 @@
 #include <vector>
 
 #include "../lib/list_directories.h"
-#include "../lib/tui.h"
+#include "../lib/tui/main.h"
 
 int main(int argc, char *argv[]) {
     std::string path;
@@ -16,15 +16,7 @@ int main(int argc, char *argv[]) {
 
     std::vector<std::string> listOfTheDirectory = listDirectories(path);
 
-    // for (std::string &dir : listOfTheDirectory) {
-    //     int lastSlash = dir.rfind('/');
-    //
-    //     dir = dir.erase(0, lastSlash + 1);
-    //
-    //     std::cout << dir << std::endl;
-    // }
-
-    printTui(listOfTheDirectory);
+    printTui(path);
 
     return 0;
 }
